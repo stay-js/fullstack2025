@@ -103,10 +103,12 @@ services:
     ports:
       - 3000:80
     volumes:
-      - ./docs/content:/app/content:ro
-      - ./docs/public:/app/public:ro
+      - ./docs/content:/app/content
+      - ./docs/public:/app/public
       - ./docs/app/_meta.global.tsx:/app/_meta.global.tsx
       - ./.env:/app/.env:ro
+    environment:
+      - DOCS_ENV=${DOCS_ENV}
     networks:
       - fullstack
 
