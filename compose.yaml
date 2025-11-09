@@ -99,7 +99,7 @@ services:
       - fullstack
 
   docs:
-    image: znagyy/docs
+    image: znagyy/docs:1.0.0
     ports:
       - 3000:80
     volumes:
